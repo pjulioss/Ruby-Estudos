@@ -1,0 +1,6 @@
+Joao, Vendas
+Andre, Vendas
+Kelly, Atendimento
+Carlos, Financeiro
+Marcos, Diretor
+Pedro, Tecnico

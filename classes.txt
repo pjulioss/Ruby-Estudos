@@ -1,0 +1,17 @@
+4 pilares da POO (OOP)
+
+Abstração:
+  Ação de abstrair uma entidade do mundo real e transformá-la em um classe.
+
+Encapsulamento:
+  Ato de dividir um programa em diversas partes tornando-o flexível, fácil de modificar e incluir novas funcionalidades.
+
+Herança:
+  Habilidade de criar uma Classe com características de outra existente. A herança promove o reuso e reaproveitamento de código.
+
+Poliformismo:
+    Capacidade de utilizar um método de diferentes formas para diferentes objetos.
+
+--------------
+
+Em POO chamamos as informações de attributes (atributos) e os comportamentos de methods (métodos)

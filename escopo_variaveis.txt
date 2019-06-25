@@ -1,0 +1,46 @@
+Em Ruby existem 4 tipos de escopos para variáveis:
+  Variável Local - Variável Global - Variável de Classe - Variável de Instancia
+
+- Variável Local: é declarada com a primeira letra do seu nome sendo uma letra minúscula ou sublinhado (underline),
+pode ser acessada apenas onde foi criada, por exemplo, se você definir uma variável local dentro de uma classe
+ela estará disponível apenas dentro desta classe, se definida dentro de um método(função), conseguirá acessá-la
+apenas dentro deste método e assim por diante.
+
+- Variável Global: é declarada com o prefixo $, pode ser acessada em qualquer lugar do programa. Seu uso é FORTEMENTE
+DESENCORAJADO pois além de ser visível em qualquer lugar do código, também pode ser alterada em inúmeros locais,
+ocasionando dificuldades no rastreamento de bugs.
+
+- Variável de Classe: é declarada com o prefixo @@, pode ser acessada em qualquer lugar da classe onde foi declarada e
+seu valor é compartilhado entre todas as instâncias de sua classe.
+
+class User
+  @@user_count = 0
+  def add(name)
+    puts "Usuário #{name} adicionado"
+    @@user_count +=1
+    puts @@user_count
+  end
+end
+
+usuario1 = User.new
+usuario1.add("Pedro")
+
+usuario2 = User.new
+usuario2.add("Julio")
+
+ - Variável de Instância: seu nome começa com o símbolo @, semelhante a variável de classe, tendo como única diferença
+ o valor que não é compartilhado entre todas as instâncias de sua classe.
+
+ class User
+   def add(name)
+     @name = name
+     puts "Usuario adicionado"
+     hello
+   end
+   def hello
+     puts "Seja bem vindo, #{@name}!"
+   end
+ end
+
+ usuario = User.new
+ usuario.add("Pedro")
